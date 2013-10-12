@@ -22,7 +22,6 @@
       <script src="../../assets/js/respond.min.js"></script>
       <![endif]-->
       <script src="assets/js/jquery-2.0.3.min.js"></script>
-      <script src="assets/js/jquery.animate-textshadow.js"></script>
 
       <script type="text/javaScript">
       $(function(){
@@ -59,20 +58,23 @@
       	},5000); 
 
 
-      	// var textShadow = function(){
-      	// 	var shadow = Math.floor( Math.random()*100);
-      	// 	var h1 = $(".jumbotron h1");
+      	var textShadow = function(){
+      		var shadow = Math.floor( Math.random()*150);
+      		if(shadow < 70){
+      			shadow+=70;
+      		}
+      		var h1 = $(".jumbotron h1");
 
-      	// 	h1.animate({textShadow: "#f00 0 0 15px"})
+      		h1.css("text-shadow","0px 0px "+shadow+"px #d35400");
 
-      	// 	setTimeout(function(){
-      	// 		textShadow();
-      	// 	},2000); 
-      	// }
+      		setTimeout(function(){
+      			textShadow();
+      		},1000); 
+      	}
 
-      	// setTimeout(function(){
-		     //  	textShadow();
-      	// },1000); 
+      	setTimeout(function(){
+		      	textShadow();
+      	},1000); 
 
 
 
