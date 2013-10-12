@@ -22,6 +22,8 @@
       <script src="../../assets/js/respond.min.js"></script>
       <![endif]-->
       <script src="assets/js/jquery-2.0.3.min.js"></script>
+      <script src="assets/js/jquery.animate-textshadow.js"></script>
+
       <script type="text/javaScript">
       $(function(){
       	    var ghost = jQuery("img.ghost");
@@ -32,21 +34,45 @@
       	    var ghost = jQuery("img.ghost");
       		var pos_x =  Math.floor( Math.random()*$(window).width());
       		var pos_y =  Math.floor( Math.random()*$(window).height());
-      		var scale = Math.random()*2.5;
+      		var scale =  Math.floor( Math.random()*2);
        		var opacity = Math.random()*0.5;
-       		console.log(ghost.css("opacity"));
-      		var width = ghost.original_width *scale;      		
-      		var height = ghost.original_height *scale;
-      		ghost.css({"top":pos_y, "left":pos_x,"width":width, "height":height});
-      		ghost.fadeTo("slow",opacity);
+      		var width = ghost.attr("original_width") *scale;      		
+      		var height = ghost.attr("original_height")*scale;
+      		ghost.css({"width":width, "height":height});
+      		ghost.css({"top":pos_y, "left":pos_x});
+      		ghost.css({"opacity":opacity});
+
       		setTimeout(function(){
-      			jQuery(".ghost").fadeTo("slow",0);
+	      		ghost.css({"opacity":0});
+      		},2000); 
+
+      		setTimeout(function(){
       			popGhost();
-      		},5000);   		 
+      		},10000);   		 
       	};
-      		setTimeout(function(){
+
+      	setTimeout(function(){
 		      	popGhost();
-      		},5000); 
+      	},5000); 
+
+
+      	// var textShadow = function(){
+      	// 	var shadow = Math.floor( Math.random()*100);
+      	// 	var h1 = $(".jumbotron h1");
+
+      	// 	h1.animate({textShadow: "#f00 0 0 15px"})
+
+      	// 	setTimeout(function(){
+      	// 		textShadow();
+      	// 	},2000); 
+      	// }
+
+      	// setTimeout(function(){
+		     //  	textShadow();
+      	// },1000); 
+
+
+
 	  });
 
       </script>
@@ -57,7 +83,7 @@
   	<div class="container">
 
   		<div class="jumbotron">
-  			<h1>Casley Ruby * AWS Autumn Hackathon</h1>
+  			<h1>Casley Ruby <img src="./assets/images/pumpkin.png" height="27" width="27" style="margin-bottom:15px;"> AWS Autumn Hackathon</h1>
   			<p class="lead">開催 : 10/26(Sat) 9:30~　<br/>参加登録締め切り : ~10/20(Sat) 23:59</p>
   			<p><a class="btn btn-lg btn-success" href="#"><img src="./assets/images/ghost.png" height="27" width="27"/>参加登録</a></p>  				
   		</div>
@@ -145,7 +171,6 @@
 
   			</div> <!-- /container -->
 
-<div class="spotlight"></div>
 <img class="ghost" src="./assets/images/ghostOrange.png" height="201" width="183">
 
     <!-- Bootstrap core JavaScript

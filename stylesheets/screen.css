@@ -16,71 +16,73 @@ body {
   margin-top: 50px; }
   /* line 20, ../sass/screen.scss */
   .jumbotron h1 {
-    margin-bottom: 20px; }
-  /* line 24, ../sass/screen.scss */
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 80px #d35400; }
+  /* line 25, ../sass/screen.scss */
   .jumbotron p img {
     opacity: 0.5;
     padding-bottom: 3px;
     margin-right: 5px; }
 
-/* line 33, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
   background-color: #f1c40f;
   border-color: #f1c40f; }
 
-/* line 38, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 .btn-success {
   color: #ffffff;
   background-color: #d35400;
   border-color: #d35400; }
 
-/* line 45, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 .lead {
   margin-bottom: 40px;
   text-align: left;
   margin-left: 10px; }
 
-/* line 50, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 .marketing {
   margin: 20px 0; }
 
-/* line 54, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 .footer {
   border-top: 0px; }
 
-/* line 60, ../sass/screen.scss */
-.spotlight {
+/* line 62, ../sass/screen.scss */
+.ghost {
   position: absolute;
-  top: -100px;
-  left: -100px;
-  width: 5px;
-  height: 5px;
-  opacity: 0;
-  background-color: #d35400;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  -ms-border-radius: 100px;
-  -o-border-radius: 100px;
-  border-radius: 100px;
-  -webkit-box-shadow: #d35400 0px 0px 80px 60px;
-  -moz-box-shadow: #d35400 0px 0px 80px 60px;
-  box-shadow: #d35400 0px 0px 80px 60px;
-  -webkit-transition-property: box-shadow;
-  -moz-transition-property: box-shadow;
-  -o-transition-property: box-shadow;
-  transition-property: box-shadow;
+  top: -200px;
+  left: -200px;
+  opacity: 0.3;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-property: width;
+  -moz-transition-property: width;
+  -o-transition-property: width;
+  transition-property: width;
+  -webkit-transition-property: height;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  transition-property: height;
   -webkit-transition-duration: 2s;
   -moz-transition-duration: 2s;
   -o-transition-duration: 2s;
-  transition-duration: 2s; }
+  transition-duration: 2s;
+  -webkit-transition: opacity 3s ease-out;
+  -moz-transition: opacity 3s ease-out;
+  -o-transition: opacity 3s ease-out;
+  transition: opacity 3s ease-out; }
 
-/* line 74, ../sass/screen.scss */
-.ghost {
-  position: absolute;
-  top: 0px;
-  left: 00px;
-  opacity: 0.5; }
-
-/* line 81, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 a {
   color: #16a085; }
+
+/* line 79, ../sass/screen.scss */
+.btn {
+  -webkit-box-shadow: #d35400 0px 0px 20px 1px;
+  -moz-box-shadow: #d35400 0px 0px 20px 1px;
+  box-shadow: #d35400 0px 0px 20px 1px;
+  z-index: 100; }
