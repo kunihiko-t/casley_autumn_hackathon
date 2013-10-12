@@ -3,4 +3,47 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+
+
+ body{
+ 	background-color: #000;	
+ 	color: #bdc3c7;
+ }
+
+
+ .jumbotron{
+ 	color: #d35400;
+ 	background-color: #000;
+ 	margin-bottom: 0px;
+ 	padding : 0px;
+ 	margin-top: 50px;
+ }
+
+ .jumbotron h1{
+ 	margin-bottom: 20px;
+ }
+
+ .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
+ 	background-color: #f1c40f;
+ 	border-color: #f1c40f;
+ }
+
+ .btn-success {
+ 	color: #ffffff;
+ 	background-color: #d35400;
+ 	border-color: #d35400;
+ }
+
+
+ .lead {
+ 	margin-bottom: 40px;
+ 	text-align: left;
+ 	margin-left: 10px;
+ }
+ .marketing {
+ 	margin: 20px 0;
+ }
+
+ .footer {
+ 	border-top: 0px;
+ }
