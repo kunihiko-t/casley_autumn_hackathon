@@ -32,10 +32,13 @@
 
       	var popGhost =  function(){
       	    var ghost = jQuery("img.ghost");
-      		var pos_x =  Math.floor( Math.random()*$(window).width());
-      		var pos_y =  Math.floor( Math.random()*$(window).height());
-      		var scale =  Math.floor( Math.random()*2);
-       		var opacity = Math.random()*0.5;
+      	    var windowWidth = $(window).width();
+      	    var windowHeight = $(window).height();
+      		var pos_x =  Math.floor( Math.random()*windowWidth);
+      		var pos_y =  Math.floor( Math.random()*windowHeight);
+
+      		var scale =  Math.random()*2;
+       		var opacity = Math.random()*0.5 + 0.1;
       		var width = ghost.attr("original_width") *scale;      		
       		var height = ghost.attr("original_height")*scale;
       		ghost.css({"width":width, "height":height});
@@ -48,7 +51,7 @@
 
       		setTimeout(function(){
       			popGhost();
-      		},10000);   		 
+      		},5000);   		 
       	};
 
       	setTimeout(function(){
